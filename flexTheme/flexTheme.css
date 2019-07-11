@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(216, 206, 206);
+}
+
+.sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+.header{
+    padding: 30px;
+    background-color: maroon;
+    color: blanchedalmond;
+    text-align: center;
+    font-size: xx-large;
+}
+#navBar{
+    font-size: large;
+    color: maroon;
+    background-color: blanchedalmond;
+    display: flex;
+    box-shadow: 0px 0px 2px 2px rgb(46, 18, 18);
+}
+#navBar a{
+    padding: 15px;
+    font-size: large;
+    color: maroon;
+    text-decoration: none;
+}
+#navBar a:hover{
+    background-color: coral;
+}
+#progress-container{
+    height: 10px;
+    background-color: gray;
+    width: 100%;
+}
+#progress-bar{
+    height: 10px;
+    background-color: red;
+    width: 0%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.side{
+    flex: 25%;
+    text-align: center;
+    border-right: 2px solid maroon;
+    overflow-y: scroll;
+    height: inherit;
+}
+.main{
+    flex: 75%;
+}
+.contentsTitle{
+    font-size: larger;
+    color:  blanchedalmond;
+    background-color: maroon;
+    padding: 10px;
+}
+.item{
+    font-size: large;
+    color: maroon;
+    padding: 10px;
+}
+.item:hover, :active{
+    background-color: coral;
+}
+.imageGalleryRow{
+    padding: 5px;
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.imageGalleryColumn{
+    padding-left: 5px;
+    flex: 25%;
+    max-width: 25%;
+}
+video{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-top: auto;
+}
+.footer{
+    background-color: rgb(78, 78, 78);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+}
+@media screen and (max-width: 800px){
+    .row{
+        flex-direction: column;
+    }
+    .imageGalleryColumn{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px){
+    #navBar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .imageGalleryColumn{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+#videoButton{
+    font-size: xx-large;
+    color: blanchedalmond;
+    background-color: maroon;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2x gray;
+    cursor: pointer;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+}
